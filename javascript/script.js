@@ -1,4 +1,5 @@
 var currentlyfading = false
+var count = 0
 
 function fadeout(doc) {
 	if (doc.style.opacity >= 0) {
@@ -47,3 +48,20 @@ function ButtonAlert() {
 	doc.style.opacity = 1
 	setTimeout(fadeout,1000,doc);
 }
+
+function CountButton() {
+	count += 1
+	if (count == 1) {
+		s = ""
+	} else {
+		s = "s"
+	}
+	var string = `You have clicked the button ${count} time${s}.`
+	document.getElementById("buttoncount").innerHTML = string
+	doc = document.getElementById("count")
+	doc.style.opacity = 1
+	setTimeout(fadeout,1000,doc);
+}
+
+	
+	
