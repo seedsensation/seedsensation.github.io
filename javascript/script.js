@@ -1,4 +1,5 @@
 var currentlyfading = false
+toggle = true
 var count = 0
 
 function fadeout(doc) {
@@ -60,8 +61,13 @@ function CountButton() {
 	document.getElementById("buttoncount").innerHTML = string
 	doc = document.getElementById("count")
 	doc.style.opacity = 1
-	setTimeout(fadeout,1000,doc);
+	counttimeout = setTimeout(fadeout,1000,doc);
 }
 
+function ColourGen() {
+	const randomColor = Math.floor(Math.random()*16777215).toString(16);
+	document.body.style.backgroundColor = "#" + randomColor;
+	document.getElementById("colour").innerHTML = "Current Colour is: #"+ randomColor
+}
 	
 	
