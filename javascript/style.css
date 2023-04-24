@@ -1,0 +1,21 @@
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	color: navy;
+	margin-left: 20px;
+}
+
+p {
+	color: navy;
+	margin-left: 10px;
+}
+
+div {
+	opacity: 1;
+}
+
+invisible {
+	opacity: 0;
+}
