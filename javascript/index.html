@@ -18,7 +18,9 @@
 <h2>Buttons</h2>
 <button type="button" onclick="FadeOutButton()">Fade Out Text</button>
 <button type="button" onclick="FadeInButton()">Fade In Text</button>
+<br><br>
 <button type="button" onclick='document.getElementById("demo").innerHTML = "Date : " + Date()'>Update Time</button>
+<button type="button" onclick="CountButton()">Counter</button>
 </div>
 
 <br>
@@ -27,12 +29,19 @@
 <pr>Please wait for the text to finish fading first.</pr>
 </div>
 
+<div id=count>
+<py id=buttoncount>You have clicked the button 0 times.</py>
+</div>
+
 <script>
 document.getElementById("demo").innerHTML = "Date : " + Date()
 document.getElementById("fade").style.opacity = 1
 document.getElementById("alert").style.opacity = 0
+document.getElementById("count").style.opacity = 0
 </script>
 
+<br><br>
+<p><a href="https://github.com/seedsensation/seedsensation.github.io/">Github Repository</a></p>
 
 </body>
 </html>
