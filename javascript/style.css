@@ -7,13 +7,32 @@ h1 {
 	margin-left: 20px;
 }
 
+h2 {
+	color: navy;
+	margin-left: 10px;
+}
+
 p {
 	color: navy;
 	margin-left: 10px;
 }
 
+pb {
+	color: blue;
+	margin-left: 10px;
+}
+
+pr {
+	color: red;
+	margin-left: 10px;
+}
+
 div {
 	opacity: 1;
+}
+
+button {
+	margin-left: 10px;
 }
 
 invisible {
