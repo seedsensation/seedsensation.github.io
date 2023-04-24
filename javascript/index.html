@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+<h1> JAVASCRIPT TEST PAGE</h1>
+
+<div id=fade>
+<pb id=test>this is a test page for trying out different functionalities in JavaScript & HTML.</pb>
+<p id="demo"></p>
+</div>
+
+<div id=buttons>
+<h2>Buttons</h2>
+<button type="button" onclick="FadeOutButton()">Fade Out Text</button>
+<button type="button" onclick="FadeInButton()">Fade In Text</button>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Date : " + Date()'>Update Time</button>
+</div>
+
+<br>
+
+<div id=alert>
+<pr>Please wait for the text to finish fading first.</pr>
+</div>
+
+<script>
+document.getElementById("demo").innerHTML = "Date : " + Date()
+document.getElementById("fade").style.opacity = 1
+document.getElementById("alert").style.opacity = 0
+</script>
+
+
+</body>
+</html>
