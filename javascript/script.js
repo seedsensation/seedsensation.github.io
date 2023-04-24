@@ -1,35 +1,49 @@
+var currentlyfading = false
+
 function fadeout(doc) {
-	if (doc.style.opacity > 0) {
-		doc.style.opacity -= 0.01;
+	if (doc.style.opacity >= 0) {
+		doc.style.opacity = doc.style.opacity - 0.01;
 		setTimeout(fadeout,10,doc);
-		return
+	} else {
+		console.log("Complete");
+		currentlyfading = false
 	}
-	else {
-		return
-	}
+	return
 }
 
 function fadein(secret) {
-	if (secret.style.opacity < 1) {
-		secret.style.opacity += 0.01;
-		console.log(secret.style.opacity);
+	if (secret.style.opacity <= 1) {
+		secret.style.opacity = parseFloat(secret.style.opacity) + 0.01;
 		setTimeout(fadein,10,secret);
-		return
+	} else {
+		console.log("Complete");
+		currentlyfading = false
 	}
-	else {
-		return
+	return
+}
+
+function FadeOutButton() {
+	if (currentlyfading == true) {
+		ButtonAlert()
+	} else {
+		const doc = document.getElementById("fade");
+		currentlyfading = true
+		fadeout(doc);
 	}
 }
 
-function testButton() {
-	alert("Hello!");
-	const doc = document.getElementById("fade");
-	const secret = document.getElementById("hidden")
-	document.getElementById("test").style.color = "blue";
-	console.log(secret.style.opacity);
-	console.log("hi");
-	fadeout(doc);
-	secret.style.opacity = 0
-	fadein(secret)
+function FadeInButton() {
+	if (currentlyfading == true) {
+		ButtonAlert()
+	} else {
+		const doc = document.getElementById("fade");
+		currentlyfading = true
+		fadein(doc);
+	}
 }
 
+function ButtonAlert() {
+	const doc = document.getElementById("alert");
+	doc.style.opacity = 1
+	setTimeout(fadeout,1000,doc);
+}
