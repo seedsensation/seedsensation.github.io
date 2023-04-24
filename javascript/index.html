@@ -8,17 +8,18 @@
 <meta content="mercury's silly site" property="og:title" />
 <meta content="Test Site for Working with Javascript" property="og:description" />
 <meta content="https://me.rcury.com/javascript/" property="og:url" />
-<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<meta content="#7216f2" data-react-helmet="true" name="theme-color" />
 
 </head>
 
-<body>
+<body id=body>
 
 <h1> JAVASCRIPT TEST PAGE</h1>
 
 <div id=fade>
 <pb id=test>this is a test page for trying out different functionalities in JavaScript & HTML.</pb>
-<p id="demo"></p>
+<p id="clock"></p>
+<p id="colour"></p>
 </div>
 
 <div id=buttons>
@@ -26,8 +27,8 @@
 <button type="button" onclick="FadeOutButton()">Fade Out Text</button>
 <button type="button" onclick="FadeInButton()">Fade In Text</button>
 <br><br>
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Date : " + Date()'>Update Time</button>
 <button type="button" onclick="CountButton()">Counter</button>
+<button type="button" onclick="ColourGen()">Change Background Colour</button>
 </div>
 
 <br>
@@ -41,10 +42,13 @@
 </div>
 
 <script>
-document.getElementById("demo").innerHTML = "Date : " + Date()
+document.getElementById("clock").innerHTML = "Date : " + Date()
 document.getElementById("fade").style.opacity = 1
 document.getElementById("alert").style.opacity = 0
 document.getElementById("count").style.opacity = 0
+setInterval(function () {
+	document.getElementById("clock").innerHTML = "Date : " + Date()
+	}, 1000)
 </script>
 
 <br><br>
