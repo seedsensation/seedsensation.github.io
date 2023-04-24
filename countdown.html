@@ -23,7 +23,7 @@ body {
 </style>
 </head>
 <body>
-<p>The Service Desk Phone Line Closes In:</p>
+<p id="intro">The Service Desk Phone Line Closes In:</p>
 <h1 id="demo"></h1>
 
 <script>
@@ -53,6 +53,9 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "THE SERVICE DESK IS NOW CLOSED";
+	document.getElementById("intro").innerHTML = "";
+	document.getElementById("demo").style.fontSize = "120px";
+
   }
 }, 1000);
 </script>
