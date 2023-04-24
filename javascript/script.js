@@ -1,4 +1,4 @@
-var currentlyfading = false
+var currentlyfading = false 
 toggle = true
 var count = 0
 
