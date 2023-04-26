@@ -1,1 +1,1 @@
-come visit me at ***https://me.rcury.com/javascript***
+come visit me at ***https://me.rcury.com/***
