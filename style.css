@@ -1,0 +1,19 @@
+h1 {
+	margin-left: 10px;
+}
+
+p {
+	margin-left: 20px;
+}
+
+button {
+	margin-left: 10px;
+}
+
+
+.float {
+	float: left;
+	absolute: true;
+	color: orange;
+
+}
