@@ -1,4 +1,4 @@
-counter = 0
+fadeInCount = 0
 
 function start() {
 	for (let i=0; i < classFade.length; i++) {
@@ -7,13 +7,30 @@ function start() {
 }
 
 function createPage() {
-	counter += 1
-	for (let i=0; i < classHidden.length; i++) {
-		if (classHidden[i].style.opacity < 1) {
-			fadein(classHidden[i],createPage);
-			break
+	fadeInCount += 1
+	if (fadeInCount > classHidden.length) {
+		console.log("SHOULD NOW BE FADING OUT")
+		setTimeout(fadeOutConversation(),1500)
+	} else {
+		for (let i=0; i < classHidden.length; i++) {
+			if (classHidden[i].style.opacity < 1) {
+				fadein(classHidden[i],createPage);
+				break
+			}
 		}
 	}
+}
+
+function fadeOutConversation() {
+	console.log("Fading Out Conversation")
+	for (let i=0; i < classHidden.length; i++) {
+		fadeout(classHidden[i],true,createButtons)
+	}
+}
+
+function createButtons() {
+	toFade = document.getElementById("menu")
+	setTimeout(fadein,500,toFade)
 }
 
 function fadeout(doc, del=false, callback=undefined) {
@@ -37,7 +54,6 @@ function fadeout(doc, del=false, callback=undefined) {
 
 function fadein(doc,callback=undefined) {
 	if (doc.style.opacity < 1) {
-		console.log(doc.style.opacity)
 		doc.style.opacity = parseFloat(doc.style.opacity) + 0.01;
 		setTimeout(fadein,10,doc,callback);
 	} else {
