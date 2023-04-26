@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0021)https://me.rcury.com/ -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
 <body>
+
+<div class="fadeout">
+
 <h1>Hello World</h1>
 <p>
   This is a placeholder page.<br>
   I will eventually be able to turn this into my CV.<br>
   The repository can be found <a href="https://github.com/seedsensation/seedsensation.github.io">here</a>. :) 
-  Also, a test page for me learning JavaScript can be found <a href="https://me.rcury.com/javascript/">here</a>!
 </p>
-</body>
-</html>
+
+<button onclick="start()" type="button">welcome!</button>
+
+</div>
+
+<div id=tohide>
+
+<div class="invisible">
+<h3 style="color:blue">Hello!</h3>
+</div>
+
+
+<div class="invisible">
+<p>Thank you for coming to my website!</p>
+</div>
+
+
+<div class="invisible">
+<p>I appreciate you coming.</p>
+</div>
+
+
+<div class="invisible">
+<p>I don't have much to show you right now, but I can give you some buttons to play around with in the meantime!</p>
+</div>
+
+<br><br>
+
+<div class="invisible" id=menu>
+<h2>Buttons</h2>
+<p id=colour>Current Colour is: #FFFFFF</p>
+<p id=clock></p>
+<button type="button" onclick="CountButton()">Counter</button>
+<button type="button" onclick="ColourGen()">Change Background Colour</button>
+</div>
+
+<br>
+
+<div class=float id=count>
+<p id=buttoncount>You have clicked the button 0 times.</p>
+</div>
+
+<script>
+const classHidden = document.getElementsByClassName("invisible")
+const classFade = document.getElementsByClassName("fadeout")
+document.getElementById("count").style.opacity = 0
+document.getElementById("clock").innerHTML = "Date : " + Date()
+buttonCount = 0
+
+for (let i=0; i < classFade.length; i++) {
+	classFade[i].style.opacity = 1
+}
+
+
+for (let i=0; i < classHidden.length; i++) {
+	classHidden[i].style.opacity = 0
+	console.log("Making "+classHidden[i]+" invisible")
+}
+
+
+setInterval(function () {
+	document.getElementById("clock").innerHTML = "Date : " + Date()
+	}, 1000)
+document.getElementById("count").style.opacity = 0
+
+function CountButton() {
+	buttonCount += 1
+	if (buttonCount == 1) {
+		s = ""
+	} else {
+		s = "s"
+	}
+	var string = `You have clicked the button ${buttonCount} time${s}.`
+	document.getElementById("buttoncount").innerHTML = string
+	doc = document.getElementById("count")
+	doc.style.opacity = 1
+	counttimeout = setTimeout(fadeout,1000,doc);
+}
+	
+function ColourGen() {
+	const randomColor = Math.floor(Math.random()*16777215).toString(16);
+	document.body.style.backgroundColor = "#" + randomColor;
+	document.getElementById("colour").innerHTML = "Current Colour is: #"+ randomColor.toUpperCase()
+}
+</script>
+
+
+</body></html>
