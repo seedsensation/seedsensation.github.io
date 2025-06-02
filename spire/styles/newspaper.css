@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
+}
+
+p {
+    white-space: pre-line;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    line-height: 72px;
+    margin-bottom: 20px;
+
+}
+
+.subhead {
+    text-align: center;
+    border-bottom: 2px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
+    padding: 4px;
+}
+
+.column h1 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+}
+
+.column h2 {
+    text-align: center;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.column h2:before {
+    border-top: 1px solid #2f2f2f;
+    width: 100px;
+    content: '';
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.column h2:after{
+    border-bottom: 1px solid #2f2f2f;
+    width: 100px;
+    content: '';
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: block;
+    overflow: auto;
+    height: auto;
+}
+
+.column + .column {
+    border-left: 1px solid #2f2f2f;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    float: left;
+    margin: 5px;
+    width: 150px;
+    border: 2px solid #FFF;
+    outline: 3px solid black;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    filter: grayscale(100%) sepia(20%);
+}
+
+
+.border {
+    padding-right: 100px;
+}
+
+
+@media only all and (max-width: 600px) {
+    .column{
+        width: 100%;
+    }
+
+    .column + .column {
+        border-left: none;
+        border-top: 1px solid #2f2f2f;
+    }
+
+    header{
+        max-width: 320px;
+        font-size: 60px;
+        line-height: 54px;
+        overflow: hidden;
+    }
+
+}
