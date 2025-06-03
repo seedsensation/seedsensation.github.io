@@ -28,7 +28,8 @@ p.columns {
     display: inline-block;
     text-align: center;
     line-height: 72px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 100%;
 
 }
 
@@ -38,6 +39,11 @@ p.columns {
     border-top: 2px solid #2f2f2f;
     padding: 4px;
     white-space: pre-line;
+}
+.subhead.padless {
+    padding: 0px;
+    margin: 0px;
+    margin-top: -1.5px;
 }
 
 h1 {
@@ -128,6 +134,23 @@ img {
 }
 .column.third {
     width: 31%;
+}
+
+a.invisible:active {
+    color: #2f2f2f;
+    text-decoration: none;
+}
+a.invisible:hover {
+    color: #2f2f2f;
+    text-decoration: none;
+}
+a.invisible:visited {
+    color: #2f2f2f;
+    text-decoration: none;
+}
+a.invisible:link {
+    color: #2f2f2f;
+    text-decoration: none;
 }
 
 @media only all and (max-width: 600px) {
