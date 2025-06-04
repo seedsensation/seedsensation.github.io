@@ -127,8 +127,8 @@ img {
 }
 
 .redacted {
-    font-family: 'Redacted';
     padding-right: 2px;
+    background-color: #2f2f2f;
 }
 
 .column.full {
